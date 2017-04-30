@@ -6,10 +6,11 @@
   - name: clone repo
     git: >
       repo=https://github.com/yatinsharma7/Customer_Churn.git
-      update=no
+      update=yes
       dest=/opt/predict
       version=master
       accept_hostkey=yes
+      force=yes
     tags:
       - clone-repo
   - name: Install list of required apt packages
@@ -17,6 +18,7 @@
     with_items:
     - python-dev
     - python-pip
+    - libfreetype6-dev
     become: yes
     become_user: root
   - name: install python packages 
