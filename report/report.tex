@@ -2,7 +2,7 @@
 \usepackage{fancyvrb}
 \journal{i524} 
 
-\title{Machine Learning for Customer churn prediction using big data analytics}
+\title{Predicting Customer Churn Using Apache Spark Machine Learning}
 
 \author[1,*]{Yatin Sharma, Diksha Yadav}
 
@@ -20,8 +20,12 @@
 
 
 \begin{abstract}
-	This project involves use of machine learning algorithms to identify customers
-	who are most likely to discontinue using the service or product.
+	This report presents a reference implementation to the Customer Churn
+	Prediction Project that is built using Apache Spark Machine Learning. In this
+	report, we discuss the models used for predicting customer churn along with
+	their accuracies. We will also discuss the software deployment on Chameleon and
+	Jetstream cloud computing environments using Ansible and Cloudmesh Client
+	scripts.
 		\newline
 \end{abstract}
 
@@ -37,9 +41,20 @@
 \maketitle
 
 \section{Introduction}
-	We will use Apache Spark\cite{www-apache-spark} machine learning library for fitting a predictive model on a
-	massive dataset. Detailed analysis and modeling will be carried out in Python
-	Programming language.
+	One of the most important business metrics is churn rate- describing the rate at which your customers stop doing business with you. Our aim is to build a predictive model which uses data science to predict in advance which customers are at risk of leaving. Such model will allow the company to be proactive and focus on such customers. We used Apache Spark\cite{www-apache-spark} Machine Learning library(ML)\cite{www-Spark-ML} for fitting a predictive model on our dataset. Detailed analysis and modeling was be carried out in Python Programming language. Application deployment was initially done on localhost, followed by deployment on the cloud.
+
+
+\section{Loading the data}
+The Customer_Data.csv containing 21 columns and 7000 rows was used. Each row in the dataset represents an observed customer and each column represents attribute of that customer. Dataset was loaded into Spark DataFrame \cite{Spark-Dataframe} along with the specified schema. After the dataframe was instantiated, it was queried using SQL queries with the help Pyspark DataFrame API.
+
+\section{Feature Engineering}
+Every single information we use to represent a customer is called a “feature” and the activity of finding useful features is called “feature engineering.” In the Customer data set the data is labeled with two classes – Yes (Churned) and 0 (Not Churned). The features for each customer consist of:
+	\ 
+
+
+
+
+
 
 \section{Execution Summary}
 The tentative schedule for  this project has been outlined below:

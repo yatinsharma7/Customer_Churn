@@ -1,12 +1,17 @@
 #!/bin/bash
 
 
-echo "setting up environment, copying files installing dependencies ..."
+echo "***Configuring Environment, Copying files and installing dependencies ***"
 ansible-playbook predict_setup.yaml
-echo "setting up environment, copying files installing dependencies ... done"
+echo "***Configuring Environment, Copying files and installing dependencies - done***"
 
-echo "running predict application ..."
+echo "***Running predict application***"
 ansible-playbook predict_execute.yaml
-echo "running predict application ... done"
+echo "***Running predict application - done***"
 
-echo "result output files are located in /tmp/predict_results"
+echo "***Running data analysis application***"
+ansible-playbook analysis_execute.yaml
+echo "***Running data analysis  application - done***"
+
+
+echo "Results are stored in /tmp/"
