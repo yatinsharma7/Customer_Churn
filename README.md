@@ -30,4 +30,4 @@ This will setup environment,deploy code and other dependencies, submit spark app
 ### Troubleshooting
  1. Setting up the environment, installing dependencies on the remote host can take upto **15 minutes**.
  
- 2. The ```run.sh``` script might fail in between due various issues like connectivity, ssh, etc. In such events simpy re-trigger   the the ```run.sh``` script again.
+ 2. The ```run.sh``` script might fail in between due various issues like connectivity, ssh, etc. In such events simply re-trigger   the the ```run.sh``` script again.
