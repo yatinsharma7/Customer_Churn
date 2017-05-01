@@ -25,6 +25,8 @@ cd ansible-predict
 ```
 This will setup environment,deploy code and other dependencies, submit spark application, and finally fetch result from remote to local machine.
 
+### finaly look at the result in /tmp directory of your local.
+
 ### Troubleshooting
-1)Setting up the environment, installing dependencies on the remote host can take upto ## 15 minutes.
-2)The ```run.sh``` script might fail in between due various issues like connectivity, ssh, etc. In such events simpy re-trigger the the ```run.sh``` script again.
+ Markup : 1. Setting up the environment, installing dependencies on the remote host can take upto **15 minutes**.
+ 2.The ```run.sh``` script might fail in between due various issues like connectivity, ssh, etc. In such events simpy re-trigger the the ```run.sh``` script again.
