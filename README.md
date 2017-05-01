@@ -18,8 +18,13 @@ git clone https://github.com/cloudmesh/sp17-i524.git
 vi hosts
 ```
 
-### Run script to deploy and run spark application on the cloud.
+### execute 'run' script to deploy and run spark application on the cloud.
 ```
 cd ansible-predict
 ./run.sh
 ```
+This will setup environment,deploy code and other dependencies, submit spark application, and finally fetch result from remote to local machine.
+
+### Troubleshooting
+1)Setting up the environment, installing dependencies on the remote host can take upto ## 15 minutes.
+2)The ```run.sh``` script might fail in between due various issues like connectivity, ssh, etc. In such events simpy re-trigger the the ```run.sh``` script again.
